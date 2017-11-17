@@ -23,4 +23,9 @@ page = fi.write(str(response1.read()))
 
 ## 自己搜找的学习资料及视频
 
-Python数据分析 升级版https://www.julyedu.com/my/courses
+* Python数据分析 升级版https://www.julyedu.com/my/courses
+* Python网络爬虫实战https://edu.hellobi.com/course/81/lessons
+* 廖雪峰Python 3https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000
+
+
+
