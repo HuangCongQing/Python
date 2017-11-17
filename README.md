@@ -20,3 +20,7 @@ page = fi.write(str(response1.read()))
 
 ## 命令行
 *  从shell中退出python命令：是. ... 从shell（终端）中退出python：. 1、输入命令行：$ exit(). 2、快捷键： ctrl+Z. 
+
+## 自己搜找的学习资料及视频
+
+Python数据分析 升级版https://www.julyedu.com/my/courses
