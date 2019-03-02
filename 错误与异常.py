@@ -1,12 +1,12 @@
 # coding=gbk  
 '''
-Created on 2017Äê8ÔÂ14ÈÕ
+Created on 2017å¹´8æœˆ14æ—¥
 
 @author: hasee
 '''
-# Óï·¨´íÎó  syntax errors&& Òì³£Exceptions
+# è¯­æ³•é”™è¯¯  syntax errors&& å¼‚å¸¸Exceptions
 
-# while True  print("Óï·¨´íÎó")
+# while True  print("è¯­æ³•é”™è¯¯")
 # print(8/0)
 
 
@@ -20,7 +20,7 @@ Created on 2017Äê8ÔÂ14ÈÕ
     #             print("Oops!  That was no valid number.  Try again   ")
         
             
-    # Ò»¸öexcept×Ó¾ä¿ÉÒÔÍ¬Ê±´¦Àí¶à¸öÒì³££¬ÕâĞ©Òì³£½«±»·ÅÔÚÒ»¸öÀ¨ºÅÀï³ÉÎªÒ»¸öÔª×é
+    # ä¸€ä¸ªexceptå­å¥å¯ä»¥åŒæ—¶å¤„ç†å¤šä¸ªå¼‚å¸¸ï¼Œè¿™äº›å¼‚å¸¸å°†è¢«æ”¾åœ¨ä¸€ä¸ªæ‹¬å·é‡Œæˆä¸ºä¸€ä¸ªå…ƒç»„
 #     except (RuntimeError, TypeError, NameError):
 #         pass
 
@@ -39,26 +39,26 @@ Created on 2017Äê8ÔÂ14ÈÕ
     #     print("Unexpected error:", sys.exc_info()[0])
     #     raise
             
-# Å×³öÖ¸¶¨Òì³£
-    # Python Ê¹ÓÃ raise Óï¾äÅ×³öÒ»¸öÖ¸¶¨µÄÒì³£¡£
+# æŠ›å‡ºæŒ‡å®šå¼‚å¸¸
+    # Python ä½¿ç”¨ raise è¯­å¥æŠ›å‡ºä¸€ä¸ªæŒ‡å®šçš„å¼‚å¸¸ã€‚
     
 # raise NameError('HiThere')
     
     
-#¡¡¶¨ÒåÇåÀíĞĞÎª
-    # try Óï¾ä»¹ÓĞÁíÍâÒ»¸ö¿ÉÑ¡µÄ×Ó¾ä£¬Ëü¶¨ÒåÁËÎŞÂÛÔÚÈÎºÎÇé¿öÏÂ¶¼»áÖ´ĞĞµÄÇåÀíĞĞÎª
+#ã€€å®šä¹‰æ¸…ç†è¡Œä¸º
+    # try è¯­å¥è¿˜æœ‰å¦å¤–ä¸€ä¸ªå¯é€‰çš„å­å¥ï¼Œå®ƒå®šä¹‰äº†æ— è®ºåœ¨ä»»ä½•æƒ…å†µä¸‹éƒ½ä¼šæ‰§è¡Œçš„æ¸…ç†è¡Œä¸º
 # try:
 #     raise KeyboardInterrupt
 # finally:
 #     print('Goodbye, world!')
 #      
      
-# Ô¤¶¨ÒåµÄÇåÀíĞĞÎª
+# é¢„å®šä¹‰çš„æ¸…ç†è¡Œä¸º
 
 for line in open("File-test.txt"):
     print(line, end="")
     
-    # ¹Ø¼ü´Ê with Óï¾ä¾Í¿ÉÒÔ±£Ö¤ÖîÈçÎÄ¼şÖ®ÀàµÄ¶ÔÏóÔÚÊ¹ÓÃÍêÖ®ºóÒ»¶¨»áÕıÈ·µÄÖ´ĞĞËûµÄÇåÀí·½·¨: 
+    # å…³é”®è¯ with è¯­å¥å°±å¯ä»¥ä¿è¯è¯¸å¦‚æ–‡ä»¶ä¹‹ç±»çš„å¯¹è±¡åœ¨ä½¿ç”¨å®Œä¹‹åä¸€å®šä¼šæ­£ç¡®çš„æ‰§è¡Œä»–çš„æ¸…ç†æ–¹æ³•: 
 with open("File-test.txt") as f:
     for line in f:
         print(line, end="")

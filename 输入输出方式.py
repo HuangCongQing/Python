@@ -1,14 +1,14 @@
 # coding=gbk  
 '''
-Created on 2017Äê8ÔÂ14ÈÕ
+Created on 2017å¹´8æœˆ14æ—¥
 
-@author: »ÆÖØÇì
+@author: é»„é‡åº†
 '''
 
-# ½ÓÊÕÓÃ»§µÄÊäÈë£º input()
-# ÊäÈë¸ñÊ½£ºstr(), str.format() 
+# æ¥æ”¶ç”¨æˆ·çš„è¾“å…¥ï¼š input()
+# è¾“å…¥æ ¼å¼ï¼šstr(), str.format() 
 
-# ¶ÁĞ´ÎÄ¼ş
+# è¯»å†™æ–‡ä»¶
     # f.read()
     # f.readline()
 
@@ -21,27 +21,27 @@ Created on 2017Äê8ÔÂ14ÈÕ
 # print("str_1 is {} +  str_2 is {}".format(str_1, str_2))
 
 
-## ¶ÁĞ´ÎÄ¼ş
-# ´ò¿ªÒ»¸öÎÄ¼ş
+## è¯»å†™æ–‡ä»¶
+# æ‰“å¼€ä¸€ä¸ªæ–‡ä»¶
 # f = open("File-test.txt", "w")
 f = open("File-test.txt", "r")
 
-# f.write( "Python ÊÇÒ»¸ö·Ç³£ºÃµÄÓïÑÔ¡£\nÊÇµÄ£¬µÄÈ··Ç³£ºÃ!!\n" )
+# f.write( "Python æ˜¯ä¸€ä¸ªéå¸¸å¥½çš„è¯­è¨€ã€‚\næ˜¯çš„ï¼Œçš„ç¡®éå¸¸å¥½!!\n" )
 str0 = f.read()
 print(str0)
 str1 = f.tell()
-print("×Ö½ÚÊı£º", str1)
+print("å­—èŠ‚æ•°ï¼š", str1)
 
-# ¹Ø±Õ´ò¿ªµÄÎÄ¼ş
+# å…³é—­æ‰“å¼€çš„æ–‡ä»¶
 f.close()
 
 
-# pythonÎÄ¼şĞ´ÈëÒ²¿ÉÒÔ½øĞĞÍøÕ¾ÅÀ³æ,ÎÒµÄpython°æ±¾ÊÇ3.6£¬ÒÔÏÂ´úÂëÊÇ´ò¿ªproject.txtÎÄ¼ş£¬
-# ²¢ÏòÀïÃæĞ´Èëhttp://www.baidu.comÍøÕ¾´úÂë¡£
+# pythonæ–‡ä»¶å†™å…¥ä¹Ÿå¯ä»¥è¿›è¡Œç½‘ç«™çˆ¬è™«,æˆ‘çš„pythonç‰ˆæœ¬æ˜¯3.6ï¼Œä»¥ä¸‹ä»£ç æ˜¯æ‰“å¼€project.txtæ–‡ä»¶ï¼Œ
+# å¹¶å‘é‡Œé¢å†™å…¥http://www.baidu.comç½‘ç«™ä»£ç ã€‚
 from urllib import request
 
-response1 = request.urlopen("http://www.baidu.com/")  # ´ò¿ªÍøÕ¾
-fi = open("project.txt", 'w')                        # openÒ»¸ötxtÎÄ¼ş
-page = fi.write(str(response1.read()))                # ÍøÕ¾´úÂëĞ´Èë
-fi.close()                                           # ¹Ø±ÕtxtÎÄ¼ş
+response1 = request.urlopen("http://www.baidu.com/")  # æ‰“å¼€ç½‘ç«™
+fi = open("project.txt", 'w')                        # openä¸€ä¸ªtxtæ–‡ä»¶
+page = fi.write(str(response1.read()))                # ç½‘ç«™ä»£ç å†™å…¥
+fi.close()                                           # å…³é—­txtæ–‡ä»¶
 

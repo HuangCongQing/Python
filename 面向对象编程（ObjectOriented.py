@@ -7,7 +7,7 @@
 
 It defines classes_and_methods
 
-@author:     ������
+@author:     黄重庆
 
 @copyright:  2017 organization_name. All rights reserved.
 
