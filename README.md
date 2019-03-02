@@ -1,6 +1,19 @@
 # Python
 Python学习
  
+
+
+### Tutorial
+
+* [python3_tutorials_菜鸟教程](./python3_tutorials_菜鸟教程)
+网站：http://www.runoob.com/python3/python3-tutorial.html
+
+* [python3_tutorials_莫凡](./python3_tutorials_莫凡)
+
+视频网址：https://www.bilibili.com/video/av16926522/?p=2
+
+
+
 * 解决Python代码编码问题  Non-UTF-8 code starting with '\xc4' in file
 导致出错的根源就是编码问题。
 解决方案是：
