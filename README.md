@@ -5,11 +5,11 @@ Python学习
 
 ### Tutorial
 
-* [python3_tutorials_菜鸟教程](./python3_tutorials_菜鸟教程)
+### [python3_tutorials_菜鸟教程](./python3_tutorials_菜鸟教程)
 
 学习网站：http://www.runoob.com/python3/python3-tutorial.html
 
-* [python3_tutorials_莫凡](./python3_tutorials_莫凡)
+### [python3_tutorials_莫凡](./python3_tutorials_莫凡)
 
 学习视频网址：https://www.bilibili.com/video/av16926522/?p=2
 

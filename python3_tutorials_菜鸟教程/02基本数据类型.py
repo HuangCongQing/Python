@@ -12,6 +12,10 @@ Created on 2017年8月12日
     # Sets（集合）
     # Dictionary（字典）可更改
 
+
+# 不可变数据（3 个）：Number（数字）、String（字符串）、Tuple（元组）；
+# 可变数据（3 个）：List（列表）、Set（集合）、Dictionary（字典）。
+
 # 多个变量赋值
 a, b, c=1,2,"Chognqing"
 print(a,b,c)
