@@ -32,6 +32,10 @@ page = fi.write(str(response1.read()))
 
 检查你的代码中变量的名字，看有没有变色的，就是设别为底层函数的即可
 
+* `pip list`
+
+该命令查看的是Python安装的第三方模块。
+
 ## 命令行
 *  从shell中退出python命令：是. ... 从shell（终端）中退出python：. 1、输入命令行：$ exit(). 2、快捷键： ctrl+Z. 
 
