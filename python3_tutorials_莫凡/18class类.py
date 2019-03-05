@@ -20,7 +20,7 @@ class Calculator:
 
 
 cal = Calculator()  # Good calculator
-cal.name
-cal.price  # 为什么没有输出？？？？？？？？？
+print(cal.name)
+print(cal.price)  # 为什么没有输出？？？？？？？？？噗，好智障
 cal.add(10, 11)  # 21
     
