@@ -18,8 +18,9 @@ class Calculator:
 
 # 调用
 
-cal = Calculator()
+
+cal = Calculator()  # Good calculator
 cal.name
 cal.price  # 为什么没有输出？？？？？？？？？
-cal.add(10,11)
+cal.add(10, 11)  # 21
     
