@@ -5,6 +5,9 @@ Python学习
 
 ### Tutorial
 
+* 安装requirement.txt中的包
+`pip3 install -r requirement.txt`
+
 ### [python3_tutorials_菜鸟教程](./python3_tutorials_菜鸟教程)
 
 学习网站：http://www.runoob.com/python3/python3-tutorial.html
