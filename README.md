@@ -53,7 +53,7 @@ page = fi.write(str(response1.read()))
 1. [如何简单地理解Python中的if __name__ == '__main__'](https://github.com/HuangCongQing/Python/issues/8)
 1. [python中出现IndentationError:unindent does not match any outer indentation level错误](https://github.com/HuangCongQing/Python/issues/9)
 1. [SyntaxError: invalid syntax](https://github.com/HuangCongQing/Python/issues/10)
-1. [TypeError: slice indices must be integers or None or have an __index__ method](https://github.com/1. HuangCongQing/Python/issues/11)
+1. [TypeError: slice indices must be integers or None or have an __index__ method](https://github.com/HuangCongQing/Python/issues/11)
 1. [UnicodeDecodeError: 'gbk' codec can't decode byte 0xa4 in position 115: ille](https://github.com/HuangCongQing/Python/issues/12)
 
 1. [打开Anaconda Prompt 显示显示python已停止工作](https://github.com/HuangCongQing/Python/issues/13)
