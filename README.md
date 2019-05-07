@@ -42,6 +42,32 @@ page = fi.write(str(response1.read()))
 ## 命令行
 *  从shell中退出python命令：是. ... 从shell（终端）中退出python：. 1、输入命令行：$ exit(). 2、快捷键： ctrl+Z. 
 
+### issues
+
+
+1. [同时装了Python3和Python2，怎么用pip？](https://github.com/HuangCongQing/Python/issues/3)
+1. [ImportError: DLL load failed: 找不到指定的模块。](https://github.com/HuangCongQing/Python/issues/4)
+1. [安装Python模块时，报错[error] Microsoft Visual C++ 14.0 is required](https://github.com/HuangCongQing/Python/issues/5)
+1. [出现ReadTimeoutError(self._pool, None, 'Read timed out.')](https://github.com/HuangCongQing/Python/issues/6)
+1. [python 各种包下载大全网址](https://github.com/HuangCongQing/Python/issues/7)
+1. [如何简单地理解Python中的if __name__ == '__main__'](https://github.com/HuangCongQing/Python/issues/8)
+1. [python中出现IndentationError:unindent does not match any outer indentation level错误](https://github.com/HuangCongQing/Python/issues/9)
+1. [SyntaxError: invalid syntax](https://github.com/HuangCongQing/Python/issues/10)
+1. [TypeError: slice indices must be integers or None or have an __index__ method](https://github.com/1. HuangCongQing/Python/issues/11)
+1. [UnicodeDecodeError: 'gbk' codec can't decode byte 0xa4 in position 115: ille](https://github.com/HuangCongQing/Python/issues/12)
+
+1. [打开Anaconda Prompt 显示显示python已停止工作](https://github.com/HuangCongQing/Python/issues/13)
+
+1. [NoPackagesFoundError: Package missing in current win-64 channels: - cudatoolkit 7.5 2](https://github.com/HuangCongQing/Python/issues/14)
+
+
+
+
+ 
+
+
+
+
 ## 自己搜找的学习资料及视频
 
 * Python数据分析 升级版https://www.julyedu.com/my/courses
