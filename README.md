@@ -1,8 +1,10 @@
 # Python
 Python学习
  
-
-
+* modules
+     * https://pypi.org
+     * https://www.lfd.uci.edu/~gohlke/pythonlibs/
+     
 ### Tutorial
 
 * 安装requirement.txt中的包
