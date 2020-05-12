@@ -41,6 +41,10 @@ page = fi.write(str(response1.read()))
 
 该命令查看的是Python安装的第三方模块。
 
+
+
+[self](https://www.cnblogs.com/masbay/p/10688541.html)
+
 ## 命令行
 *  从shell中退出python命令：是. ... 从shell（终端）中退出python：. 1、输入命令行：$ exit(). 2、快捷键： ctrl+Z. 
 
