@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # coding=gbk  
 '''
 Created on 2017年8月12日
@@ -54,7 +55,7 @@ print(r'Huang\Chong')
     # ython字符串不一样的是，列表中的元素是可以改变的：
     #List内置了有很多方法，例如append()、pop()等
 list = ['Haung',12, 2.34]
-print(list[1:])
+print("list[1:]", list[1:])
 list[1:] = [] # 可重置
 print(list[1:])     
 
