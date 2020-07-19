@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Author: HCQ
+ * @Company(School): UCAS
+ * @Date: 2020-06-16 17:18:05
+ * @LastEditors: HCQ
+ * @LastEditTime: 2020-07-19 23:45:27
+--> 
 # Python
 Python学习
  
@@ -17,6 +25,11 @@ Python学习
 ### [python3_tutorials_莫凡](./python3_tutorials_莫凡)
 
 学习视频网址：https://www.bilibili.com/video/av16926522/?p=2
+
+
+### [北邮《Python编程与实践》课程 (2020)](https://github.com/fly51fly/Practical_Python_Programming)
+
+学习视频网址：https://www.bilibili.com/video/BV1b7411N7P2
 
 
 
