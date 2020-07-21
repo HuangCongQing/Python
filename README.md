@@ -4,10 +4,14 @@
  * @Company(School): UCAS
  * @Date: 2020-06-16 17:18:05
  * @LastEditors: HCQ
- * @LastEditTime: 2020-07-19 23:45:27
+ * @LastEditTime: 2020-07-21 20:49:31
 --> 
 # Python
 Python学习
+想在哪个文件夹下打开jupyter，就在相对应的文件夹下打开终端
+运行
+```jupyter-notebook```
+
  
 * modules
      * https://pypi.org
