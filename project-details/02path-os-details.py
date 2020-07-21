@@ -4,7 +4,7 @@
 @Company(School): UCAS
 @Date: 2020-07-20 22:30:12
 @LastEditors: HCQ
-@LastEditTime: 2020-07-21 09:18:04
+@LastEditTime: 2020-07-21 09:19:06
 '''
 # 参考：记录下os.path.dirname(__file__)使用 https://blog.csdn.net/JOJOY_tester/article/details/54598713
 
@@ -46,4 +46,4 @@ www = 'https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip'
 zipfile = os.path.basename(www) # 获得文件名modelnet40_ply_hdf5_2048
 print('zipfile', zipfile)
 # os.system 运行linux命令
-os.system('wget --no-check-certificate %s; unzip %s' % (www, zipfile))
+# os.system('wget --no-check-certificate %s; unzip %s' % (www, zipfile))
