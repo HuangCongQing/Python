@@ -4,7 +4,7 @@
 @Company(School): UCAS
 @Date: 2020-07-20 22:30:12
 @LastEditors: HCQ
-@LastEditTime: 2020-07-21 09:19:06
+@LastEditTime: 2020-07-25 00:30:02
 '''
 # 参考：记录下os.path.dirname(__file__)使用 https://blog.csdn.net/JOJOY_tester/article/details/54598713
 
@@ -40,10 +40,15 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(BASE_DIR)
 print("sys.path: ", sys.path) # sys.path是一个数组
 
-DATA_DIR = os.path.join(BASE_DIR, 'data') # 在本目录新建data文件夹
+DATA_DIR = os.path.join(BASE_DIR, 'data') # 在本目录新建data文件夹 "f:\Github\Python\project-details\data"
 print("DATA_DIR \n", DATA_DIR)
 www = 'https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip'
 zipfile = os.path.basename(www) # 获得文件名modelnet40_ply_hdf5_2048
 print('zipfile', zipfile)
 # os.system 运行linux命令
 # os.system('wget --no-check-certificate %s; unzip %s' % (www, zipfile))
+
+
+v_f = os.path.join(os.path.dirname(os.path.abspath(__file__)), "/home/cjm/Desktop/Deecamp/workspace/DeepCamp_Lidar/test_video_filter")
+print("==========v_f==================")
+print(v_f)
