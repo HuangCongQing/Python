@@ -4,7 +4,7 @@
 @Company(School): UCAS
 @Date: 2020-07-30 08:25:11
 @LastEditors: HCQ
-@LastEditTime: 2020-07-30 12:18:04
+@LastEditTime: 2020-07-30 13:58:04
 '''
 import os
 import numpy as np
@@ -48,7 +48,7 @@ for i in range(1):
             'truncated':[list1[1],],
             'occluded':[list1[2],],
             'alpha':[list1[3],],
-            'bbox': list(map(float,list1[4:8])),
+            'bbox': list(map(float,list1[4:8])),# 字符串数组转为数字数组
             'dimensions':list1[8:11],
             'location':list1[11:14],
             'rotation_y':[list1[14], ],
