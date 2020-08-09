@@ -1,0 +1,2 @@
+n01440764    organism, being
+n01443537    benthos
