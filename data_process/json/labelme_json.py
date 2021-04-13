@@ -6,7 +6,7 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2021-04-13 17:30:08
-LastEditTime: 2021-04-13 17:55:53
+LastEditTime: 2021-04-13 18:08:29
 FilePath: /Python/data_process/json/labelme_json.py
 '''
 
@@ -50,18 +50,20 @@ def edit_labelme_json(labelme_json):
 			if shape_key == 'label':
 				# shape_values = shape_values
 				if shape_values not in label_list:
-					label_list.append(shape_values) # 物体标签
+					label_list.append(shape_values) # 物体标签'curb'
 					label_dic.update({shape_values:0})
 					shape_values = shape_values+'0'
 				else:
 					label_dic.update({shape_values:label_dic[shape_values]+1})
 					shape_values = shape_values+str(label_dic[shape_values])
-				label_values = shape_values
+				label_values = shape_values # 'curb0'
 			## 其他参数均不变
-			elif shape_key == 'points':points_values = shape_values
+			elif shape_key == 'points':
+    				points_values = shape_values # 二维数组
 			elif shape_key == 'group_id':group_id_values = shape_values
 			elif shape_key == 'shape_type':shape_type_values = shape_values
 			elif shape_key == 'flags':flags_values = shape_values
+		# 生成一个新的json数据
 		new_shape = {'label':label_values,'points':points_values,'group_id':group_id_values,'shape_type':shape_type_values,'flags':flags_values}
 		new_shapes.append(new_shape)
 	new_json = {'version':version,
@@ -72,7 +74,7 @@ def edit_labelme_json(labelme_json):
 				'imageHeight':imageHeight,
 				'imageWidth':imageWidth}
 
-	return new_json
+	return new_json # # 生成一个新的json数据
 
 def list_json(path):
 	sup_ext = ['.json']
@@ -88,7 +90,7 @@ if __name__ == '__main__':
     # json_dir = 'json_ori'
 	# out_dir = 'json'
 	json_dir = '/home/hcq/pointcloud/Python/data_process/json/json_data'
-	out_dir = '/home/hcq/pointcloud/Python/data_process/json/'
+	out_dir = '/home/hcq/pointcloud/Python/data_process/json/json_result'
 	json_list = list_json(json_dir)
 	for i in range(len(json_list)):
 		json_r = read_json(json_list[i])
