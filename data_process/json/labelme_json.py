@@ -5,7 +5,7 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2021-04-13 17:30:08
-LastEditTime: 2021-04-13 17:35:37
+LastEditTime: 2021-04-13 17:53:04
 FilePath: /Python/data_process/json/labelme_json.py
 '''
 
@@ -30,7 +30,7 @@ def edit_labelme_json(labelme_json):
 	# 	"imageData":''}
 	version = labelme_json['version']
 	flags = labelme_json['flags']
-	shapes = labelme_json['shapes']
+	shapes = labelme_json['shapes'] # 获取json shape
 	imagePath = labelme_json['imagePath']
 	imageData = labelme_json['imageData']
 	imageHeight = labelme_json['imageHeight']
@@ -49,7 +49,7 @@ def edit_labelme_json(labelme_json):
 			if shape_key == 'label':
 				# shape_values = shape_values
 				if shape_values not in label_list:
-					label_list.append(shape_values)
+					label_list.append(shape_values) # 物体标签
 					label_dic.update({shape_values:0})
 					shape_values = shape_values+'0'
 				else:
@@ -84,12 +84,14 @@ def get_outpath(out_dir,name):
 	return os.path.join(out_dir,os.path.basename(name))
 
 if __name__ == '__main__':
-	json_dir = 'json_ori'
-	out_dir = 'json'
+    # json_dir = 'json_ori'
+	# out_dir = 'json'
+	json_dir = '/home/hcq/pointcloud/Python/data_process/json/json_data'
+	out_dir = '/home/hcq/pointcloud/Python/data_process/json/'
 	json_list = list_json(json_dir)
 	for i in range(len(json_list)):
 		json_r = read_json(json_list[i])
-		json_ed = edit_labelme_json(json_r)
+		json_ed = edit_labelme_json(json_r) # 处理json数据
 		outpath = get_outpath(out_dir,json_list[i])
 		save_json(outpath,json_ed)
 
