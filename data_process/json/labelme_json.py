@@ -1,11 +1,12 @@
 '''
 Description: labelme json文件读取和保存
+Tips: 需要设置路径
 link： https://codeleading.com/article/59014139939/
 Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2021-04-13 17:30:08
-LastEditTime: 2021-04-13 17:53:04
+LastEditTime: 2021-04-13 17:55:53
 FilePath: /Python/data_process/json/labelme_json.py
 '''
 
