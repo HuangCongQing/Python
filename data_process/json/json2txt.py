@@ -4,7 +4,7 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2021-04-13 18:34:32
-LastEditTime: 2021-04-13 18:47:15
+LastEditTime: 2021-04-14 14:33:23
 FilePath: /Python/data_process/json/json2txt.py
 '''
 
@@ -72,4 +72,4 @@ if __name__ == '__main__':
     json_list = list_json(json_dir)
     for i in range(len(json_list)):
         json_r = read_json(json_list[i])
-        json_ed = edit_labelme_json(json_r)  # 处理json数据
+        edit_labelme_json(json_r)  # 处理json数据
