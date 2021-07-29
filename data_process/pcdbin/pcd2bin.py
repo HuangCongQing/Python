@@ -14,12 +14,13 @@ import fire
 
 def read_pcd(filepath):
     lidar = []
-    with open(filepath,'r') as f:
-        line = f.readline().strip()
+    with open(filepath,'r', encoding='utf-8') as f: # encoding='gbk'
+        line = f.readline().strip()  # decode('gbk')
         while line:
             linestr = line.split(" ")
             if len(linestr) == 3: # 判断坐标位置(每行空格分成多多少个)===========================================
                 linestr_convert = list(map(float, linestr))
+                linestr_convert.append(0) # intensity补0
                 print("linestr_convert: ", linestr_convert)
                 lidar.append(linestr_convert)
             line = f.readline().strip()
@@ -39,9 +40,10 @@ def convert(pcdfolder, binfolder):
     for file in file_list: 
         (filename,extension) = os.path.splitext(file)
         velodyne_file = os.path.join(ori_path, filename) + '.pcd'
-        print("============当前读取文件: %s =========" %(velodyne_file))
+        print("============当前读取文件: %+10s =========" %(velodyne_file))
         pl = read_pcd(velodyne_file)
-        pl = pl.reshape(-1, 4).astype(np.float32)
+        pl = pl.reshape(-1, 4).astype(np.float32) # 自己设置四列!!!!=================x,y,z,intensity
+        print("pl: %s" %(pl))
         velodyne_file_new = os.path.join(des_path, filename) + '.bin'
         pl.tofile(velodyne_file_new)
     
