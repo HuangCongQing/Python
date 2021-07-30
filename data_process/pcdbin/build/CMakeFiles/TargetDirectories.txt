@@ -1,3 +1,0 @@
-/home/hcq/pointcloud/Python/data_process/pcdbin/build/CMakeFiles/rebuild_cache.dir
-/home/hcq/pointcloud/Python/data_process/pcdbin/build/CMakeFiles/edit_cache.dir
-/home/hcq/pointcloud/Python/data_process/pcdbin/build/CMakeFiles/pcd2bin.dir

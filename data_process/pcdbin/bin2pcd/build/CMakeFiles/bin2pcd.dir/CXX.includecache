@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hcq/pointcloud/Python/data_process/pcdbin/pcd2bin.cpp
+/home/hcq/pointcloud/Python/data_process/pcdbin/bin2pcd/bin2pcd.cpp
 omp.h
 -
 ctime
@@ -14,6 +14,8 @@ ctime
 vector
 -
 string
+-
+dirent.h
 -
 algorithm
 -

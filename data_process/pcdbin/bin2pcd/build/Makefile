@@ -48,10 +48,10 @@ RM = /home/hcq/anaconda3/envs/torch/lib/python3.6/site-packages/cmake/data/bin/c
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hcq/pointcloud/Python/data_process/pcdbin
+CMAKE_SOURCE_DIR = /home/hcq/pointcloud/Python/data_process/pcdbin/bin2pcd
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hcq/pointcloud/Python/data_process/pcdbin/build
+CMAKE_BINARY_DIR = /home/hcq/pointcloud/Python/data_process/pcdbin/bin2pcd/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hcq/pointcloud/Python/data_process/pcdbin/build/CMakeFiles /home/hcq/pointcloud/Python/data_process/pcdbin/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hcq/pointcloud/Python/data_process/pcdbin/bin2pcd/build/CMakeFiles /home/hcq/pointcloud/Python/data_process/pcdbin/bin2pcd/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hcq/pointcloud/Python/data_process/pcdbin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hcq/pointcloud/Python/data_process/pcdbin/bin2pcd/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named pcd2bin
+# Target rules for targets named bin2pcd
 
 # Build rule for target.
-pcd2bin: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pcd2bin
-.PHONY : pcd2bin
+bin2pcd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bin2pcd
+.PHONY : bin2pcd
 
 # fast build rule for target.
-pcd2bin/fast:
-	$(MAKE) -f CMakeFiles/pcd2bin.dir/build.make CMakeFiles/pcd2bin.dir/build
-.PHONY : pcd2bin/fast
+bin2pcd/fast:
+	$(MAKE) -f CMakeFiles/bin2pcd.dir/build.make CMakeFiles/bin2pcd.dir/build
+.PHONY : bin2pcd/fast
 
-pcd2bin.o: pcd2bin.cpp.o
+bin2pcd.o: bin2pcd.cpp.o
 
-.PHONY : pcd2bin.o
+.PHONY : bin2pcd.o
 
 # target to build an object file
-pcd2bin.cpp.o:
-	$(MAKE) -f CMakeFiles/pcd2bin.dir/build.make CMakeFiles/pcd2bin.dir/pcd2bin.cpp.o
-.PHONY : pcd2bin.cpp.o
+bin2pcd.cpp.o:
+	$(MAKE) -f CMakeFiles/bin2pcd.dir/build.make CMakeFiles/bin2pcd.dir/bin2pcd.cpp.o
+.PHONY : bin2pcd.cpp.o
 
-pcd2bin.i: pcd2bin.cpp.i
+bin2pcd.i: bin2pcd.cpp.i
 
-.PHONY : pcd2bin.i
+.PHONY : bin2pcd.i
 
 # target to preprocess a source file
-pcd2bin.cpp.i:
-	$(MAKE) -f CMakeFiles/pcd2bin.dir/build.make CMakeFiles/pcd2bin.dir/pcd2bin.cpp.i
-.PHONY : pcd2bin.cpp.i
+bin2pcd.cpp.i:
+	$(MAKE) -f CMakeFiles/bin2pcd.dir/build.make CMakeFiles/bin2pcd.dir/bin2pcd.cpp.i
+.PHONY : bin2pcd.cpp.i
 
-pcd2bin.s: pcd2bin.cpp.s
+bin2pcd.s: bin2pcd.cpp.s
 
-.PHONY : pcd2bin.s
+.PHONY : bin2pcd.s
 
 # target to generate assembly for a file
-pcd2bin.cpp.s:
-	$(MAKE) -f CMakeFiles/pcd2bin.dir/build.make CMakeFiles/pcd2bin.dir/pcd2bin.cpp.s
-.PHONY : pcd2bin.cpp.s
+bin2pcd.cpp.s:
+	$(MAKE) -f CMakeFiles/bin2pcd.dir/build.make CMakeFiles/bin2pcd.dir/bin2pcd.cpp.s
+.PHONY : bin2pcd.cpp.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... pcd2bin"
-	@echo "... pcd2bin.o"
-	@echo "... pcd2bin.i"
-	@echo "... pcd2bin.s"
+	@echo "... bin2pcd"
+	@echo "... bin2pcd.o"
+	@echo "... bin2pcd.i"
+	@echo "... bin2pcd.s"
 .PHONY : help
 
 
