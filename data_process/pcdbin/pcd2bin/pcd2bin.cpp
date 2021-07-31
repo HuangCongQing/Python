@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-07-30 17:13:40
- * @LastEditTime: 2021-07-30 17:43:45
+ * @LastEditTime: 2021-07-31 12:03:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /Python/data_process/pcdbin/pcd2bin.cpp
@@ -47,8 +47,11 @@ void convertPCDtoBin(std::string &in_file, std::string& out_file)
 		myFile.write((char*)& cloud->at(j).x, sizeof(cloud->at(j).x));
 		myFile.write((char*)& cloud->at(j).y, sizeof(cloud->at(j).y));
 		myFile.write((char*)& cloud->at(j).z, sizeof(cloud->at(j).z));
-		myFile.write((char *)& cloud->at(j).intensity, sizeof(cloud->at(j).intensity));
-		//myFile << cloud->at(j).x << " " << cloud->at(j).y << " " << cloud->at(j).z << endl;
+		// myFile.write((char *)& cloud->at(j).intensity, sizeof(cloud->at(j).intensity)); // 正常intensity
+		cloud->at(j).intensity = 0;
+		myFile.write((char *)& cloud->at(j).intensity, sizeof(cloud->at(j).intensity)); // intensity = 0
+		// myFile << cloud->at(j).x << " " << cloud->at(j).y << " " << cloud->at(j).z << std::endl;
+		std::cout << "point: " << cloud->at(j).x << " " << cloud->at(j).y << " " << cloud->at(j).z << " " << cloud->at(j).intensity  << std::endl;
 	}
 	myFile.close();
 }
