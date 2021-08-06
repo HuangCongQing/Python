@@ -1,4 +1,14 @@
 /*
+ * @Description: 运行
+./pcd2bin /home/hcq/pointcloud/Python/data_process/data/1597975063.081979.rs-bpearl.pcd /home/hcq/pointcloud/Python/data_process/data/1597975063.081979.rs-bpearl.bin
+ * @Author: HCQ
+ * @Company(School): UCAS
+ * @Email: 1756260160@qq.com
+ * @Date: 2021-07-30 17:13:40
+ * @LastEditTime: 2021-08-06 21:37:20
+ * @FilePath: /Python/data_process/pcdbin/pcd2bin/pcd2bin.cpp
+ */
+/*
  * @Author: your name
  * @Date: 2021-07-30 17:13:40
  * @LastEditTime: 2021-07-31 12:03:26
@@ -59,8 +69,8 @@ void convertPCDtoBin(std::string &in_file, std::string& out_file)
 
 int main(int argc, char **argv)
 {
-    std::string str1 = "/home/hcq/pointcloud/Python/data_process/data/1597975063.081979.rs-bpearl.pcd";
-    std::string str2 = "/home/hcq/pointcloud/Python/data_process/data/1597975063.081979.rs-bpearl.bin";
+    std::string str1 =  argv[1] ;// "/home/hcq/pointcloud/Python/data_process/data/1597975063.081979.rs-bpearl.pcd";
+    std::string str2 = argv[2] ;// "/home/hcq/pointcloud/Python/data_process/data/1597975063.081979.rs-bpearl.bin";
     convertPCDtoBin(str1,str2);
 
     return 0;
