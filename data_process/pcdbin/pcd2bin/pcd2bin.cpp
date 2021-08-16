@@ -1,11 +1,12 @@
 /*
  * @Description: 运行
 ./pcd2bin /home/hcq/pointcloud/Python/data_process/data/1597975063.081979.rs-bpearl.pcd /home/hcq/pointcloud/Python/data_process/data/1597975063.081979.rs-bpearl.bin
+./pcd2bin /home/hcq/pointcloud/Python/data_process/data/000012.pcd /home/hcq/pointcloud/Python/data_process/data/000012.bin
  * @Author: HCQ
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2021-07-30 17:13:40
- * @LastEditTime: 2021-08-06 21:37:20
+ * @LastEditTime: 2021-08-16 16:33:01
  * @FilePath: /Python/data_process/pcdbin/pcd2bin/pcd2bin.cpp
  */
 /*
