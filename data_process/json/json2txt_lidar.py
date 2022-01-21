@@ -5,7 +5,7 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2022-01-20 16:20:06
-LastEditTime: 2022-01-21 10:44:13
+LastEditTime: 2022-01-21 10:55:10
 FilePath: /Python/data_process/json/json2txt_lidar.py
 '''
 
@@ -24,9 +24,10 @@ def get_json(json_file, filename):
     with open(json_file, 'r') as load_f:
         content = json.load(load_f)
 
-    # # 循环处理
-    tmp = filename
-    filename_txt = out_dir + tmp + '.txt'
+    # 修改输出文件名
+    # filename = 0
+    # filename = '%06d' % filename # filename 修改名字 '000000'
+    filename_txt = out_dir + filename + '.txt'
     # 创建txt文件
     fp = open(filename_txt, mode="w", encoding="utf-8")
     # 将数据写入文件
