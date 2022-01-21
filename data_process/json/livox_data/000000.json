@@ -1,0 +1,93 @@
+{
+    "extra": {
+        "points": 24000
+    },
+    "frameid": 1,
+    "info": {
+        "points": 24000
+    },
+    "isvalid": true,
+    "objects": [
+        {
+            "box2d": {
+                "camera1": {
+                    "content": {},
+                    "generateMode": 1,
+                    "height": 42.91188972167593,
+                    "width": 47.91188499054049,
+                    "x": 588.6564217013515,
+                    "y": 396.7841470377654
+                }
+            },
+            "center": {
+                "x": 289.99472657187806,
+                "y": 54.35450091578539,
+                "z": 6.840224705613853
+            },
+            "content": {
+                "label": "2"
+            },
+            "dimensions": {
+                "height": 7.289484445407392,
+                "length": 13.934992559083582,
+                "width": 8.099242112376825
+            },
+            "generateMode": 1,
+            "isExist": true,
+            "isLeave": false,
+            "label": "2",
+            "objectid": 1,
+            "quality": {
+                "changes": {
+                    "attribute": [],
+                    "remark": "",
+                    "target": []
+                },
+                "errorType": {
+                    "attributeError": [],
+                    "otherError": "",
+                    "targetError": []
+                },
+                "qualityStatus": "unqualified"
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": -3.105929578857011
+            }
+        },
+        {
+            "isExist": true,
+            "isLeave": true,
+            "label": "2",
+            "objectid": 2
+        },
+        {
+            "isExist": true,
+            "isLeave": true,
+            "label": "5",
+            "objectid": 3
+        }
+    ],
+    "quality": {
+        "changes": [],
+        "errorResult": {
+            "errorType": [],
+            "other": ""
+        },
+        "qualityStatus": "unqualified"
+    },
+    "qualityResult": [],
+    "result": {
+        "content": {},
+        "quality": {
+            "changes": {
+                "attribute": [],
+                "remark": ""
+            },
+            "errorType": {
+                "attributeError": []
+            }
+        }
+    }
+}
