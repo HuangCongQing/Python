@@ -5,7 +5,7 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2022-01-20 16:20:06
-LastEditTime: 2022-01-20 20:59:49
+LastEditTime: 2022-01-21 10:44:13
 FilePath: /Python/data_process/json/json2txt_lidar.py
 '''
 
@@ -31,7 +31,7 @@ def get_json(json_file, filename):
     fp = open(filename_txt, mode="w", encoding="utf-8")
     # 将数据写入文件
     str_tmp = ""  # 存储字符串内容
-    # 1.获取version、flags数据============================================
+    # 1.获取数据============================================
     objects = content["objects"]
     print(len(objects))
     print("Output", objects[0]["content"])
@@ -60,7 +60,7 @@ def get_json(json_file, filename):
     fp.close()
 
 def main():
-    files = os.listdir(json_dir)  # 得到文件夹下的所有文件名称
+    files = os.listdir(json_dir)  # 得到文件夹下的所有文件名称 ['000000.json', '000015.json']
     s = []
     for file in files:  # 遍历文件夹
         filename = file.split('.')[0]
