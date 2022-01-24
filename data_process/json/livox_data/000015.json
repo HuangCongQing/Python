@@ -1,0 +1,157 @@
+{
+    "extra": {
+        "points": 24000
+    },
+    "frameid": 16,
+    "info": {
+        "points": 24000
+    },
+    "isvalid": true,
+    "objects": [
+        {
+            "box2d": {
+                "camera1": {
+                    "generateMode": 1,
+                    "height": 139.2214826297073,
+                    "width": 144.1903893498678,
+                    "x": 0,
+                    "y": 345.7785173702927
+                }
+            },
+            "center": {
+                "x": 131.40966379837835,
+                "y": 65.44129588149887,
+                "z": 0.9977970136735522
+            },
+            "content": {
+                "label": "6"
+            },
+            "dimensions": {
+                "height": 9.543095289231424,
+                "length": 10.903184808751464,
+                "width": 7.769580355099817
+            },
+            "generateMode": 1,
+            "isLeave": false,
+            "label": "6",
+            "objectid": 1,
+            "quality": {
+                "changes": {
+                    "attribute": [],
+                    "remark": "",
+                    "target": []
+                },
+                "errorType": {
+                    "attributeError": [],
+                    "targetError": []
+                },
+                "qualityStatus": "unqualified"
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 1.0279651159911893
+            }
+        },
+        {
+            "isLeave": true,
+            "label": "2",
+            "objectid": 2
+        },
+        {
+            "box2d": {},
+            "center": {
+                "x": 119.8295735226243,
+                "y": 72.5555561567527,
+                "z": -1.583625143032997
+            },
+            "content": {
+                "label": "2"
+            },
+            "dimensions": {
+                "height": 6.473430496050261,
+                "length": 12.26195306570145,
+                "width": 6.508976047382993
+            },
+            "generateMode": 1,
+            "isLeave": false,
+            "label": "2",
+            "objectid": 3,
+            "quality": {
+                "changes": {
+                    "attribute": [],
+                    "remark": "",
+                    "target": []
+                },
+                "errorType": {
+                    "attributeError": [],
+                    "targetError": []
+                },
+                "qualityStatus": "unqualified"
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": -1.8921242705083332
+            }
+        },
+        {
+            "box2d": {},
+            "center": {
+                "x": 89.77534441388131,
+                "y": 69.04361168724655,
+                "z": -1.6505804474219041
+            },
+            "content": {
+                "label": "2"
+            },
+            "dimensions": {
+                "height": 6.533411305827718,
+                "length": 7.776880611685819,
+                "width": 6.489734537762171
+            },
+            "generateMode": 1,
+            "isLeave": false,
+            "label": "2",
+            "objectid": 4,
+            "quality": {
+                "changes": {
+                    "attribute": [],
+                    "remark": "",
+                    "target": []
+                },
+                "errorType": {
+                    "attributeError": [],
+                    "targetError": []
+                },
+                "qualityStatus": "unqualified"
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": -0.05817764016075106
+            }
+        }
+    ],
+    "quality": {
+        "changes": [],
+        "errorResult": {
+            "errorType": [],
+            "other": ""
+        },
+        "qualityStatus": "unqualified"
+    },
+    "qualityResult": [],
+    "result": {
+        "content": {},
+        "quality": {
+            "changes": {
+                "attribute": [],
+                "remark": ""
+            },
+            "errorType": {
+                "attributeError": []
+            }
+        }
+    }
+}
