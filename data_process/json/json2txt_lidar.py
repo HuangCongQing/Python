@@ -26,7 +26,7 @@ json_livox = ['/home/hcq/data/2022anno/融合交付/融合交付/2021.12.10-shen
 out_dir_livox = '/home/hcq/data/2022anno/融合交付/融合交付/2021.12.10-shenbao/livox_result/'
 
 
-
+# step1 整理目录层级，得到所有json列表
 for i in json_livox:
     # path_paths =
     # for path_path in os.listdir(path):
@@ -44,6 +44,7 @@ for i in json_livox:
             # '/home/hcq/data/2022anno/融合交付/融合交付/2021.12.10-shenbao/10.25-1/_2021-10-25-11-40-50/livox/000002.json'
 # print(len(json_livox_dirs))
 
+# step2 处理每个json文件
 def get_json(json_file, out_dir, filename):
     # 读取 json 文件数据
     with open(json_file, 'r') as load_f:
@@ -52,7 +53,7 @@ def get_json(json_file, out_dir, filename):
     # 修改输出文件名
     # filename = 0
     # filename = '%06d' % filename # filename 修改名字 '000000'
-    filename_txt = out_dir + filename + '.txt'
+    filename_txt = out_dir + filename + '.txt' # 保存文件路径
     # 创建txt文件
     fp = open(filename_txt, mode="w", encoding="utf-8")
     # 将数据写入文件
@@ -102,7 +103,7 @@ def main_livox():
         # print(filename_livox)  # 000015
         get_json(file_livox, out_dir_livox, '%06d' % filename_livox)
         # print("Extracted %d json file"%filename_livox)
-        filename_livox+=1
+        filename_livox+=1 # 输出文件名从00000递增
     print("Extracted successfully")
 
 if __name__ == '__main__':
