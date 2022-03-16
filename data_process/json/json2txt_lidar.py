@@ -34,11 +34,13 @@ for i in json_livox:
     #         file_path =  json_livox + path_path + path
     for j in os.listdir(i):
         list_json = os.listdir('%s/%s/livox/'%(i,j))
-        # 排序（转数字排序，再转字符）
-        flielist = [int(x.split('.')[0]) for x in list_json]
+        # 1 排序（转数字排序，再转字符）
+        flielist = [int(x.split('.')[0]) for x in list_json] # 只有json
         flielist.sort()
         flielist = ['%06d.json' % x for x in flielist]  # 数字转成字符00000.json
-        for k in list_json:
+        # 2 遍历保存完整json路径
+        # for k in list_json:
+        for k in flielist:
             # json.load(open('%s/%s/livox/%s' % (i,j,k)))
             json_livox_dirs.append('%s/%s/livox/%s' % (i,j,k)) # 所有json文件路径
             # '/home/hcq/data/2022anno/融合交付/融合交付/2021.12.10-shenbao/10.25-1/_2021-10-25-11-40-50/livox/000002.json'
