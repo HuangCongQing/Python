@@ -40,7 +40,7 @@ for i in json_livox:
         flielist = ['%06d.json' % x for x in flielist]  # 数字转成字符00000.json
         for k in list_json:
             # json.load(open('%s/%s/livox/%s' % (i,j,k)))
-            json_livox_dirs.append('%s/%s/livox/%s' % (i,j,k))
+            json_livox_dirs.append('%s/%s/livox/%s' % (i,j,k)) # 所有json文件路径
             # '/home/hcq/data/2022anno/融合交付/融合交付/2021.12.10-shenbao/10.25-1/_2021-10-25-11-40-50/livox/000002.json'
 # print(len(json_livox_dirs))
 
@@ -79,7 +79,7 @@ def get_json(json_file, out_dir, filename):
         str_tmp += str(dx) + "  " + str(dy)+ "  " + str(dz)+ "  "  ##暂存内容
         yaw = (content["objects"][i])["rotation"]["z"] # 7 yaw角
         trackid =  (content["objects"][i])["objectid"] # 8
-        str_tmp += str(yaw) + str(trackid) # 行尾
+        str_tmp += str(yaw) + "  " +  str(trackid) # 行尾
         #   换行
         str_tmp +=  "\n"  ##暂存内容
     fp.write(str_tmp)
