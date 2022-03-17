@@ -1,12 +1,12 @@
 
 '''
-Description:
+Description:同时输出pcd和txt
 Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2022-01-20 16:20:06
-LastEditTime: 2022-03-17 20:51:50
-FilePath: /Python/data_process/json/json2txt_lidar.py
+LastEditTime: 2022-03-17 21:15:46
+FilePath: /Python/data_process/json/json2txt_lidar_rename.py
 '''
 
 import os
@@ -24,7 +24,8 @@ json_livox_dirs = []
 # json_livox = ['/home/hcq/data/2022anno/融合交付/融合交付/2021.12.10-shenbao/10.25-1', '/home/hcq/data/2022anno/融合交付/融合交付/2021.12.10-shenbao/10.25-2']
 json_livox = ['/home/hcq/data/2022anno/HT融合追踪交付0317/标注结果']
 # pcd文件
-pcd_livox = "/home/hcq/data/2022anno/2021.12.10-shenbao/10.25-1"
+# /home/hcq/data/2022anno/2021.12.10-shenbao/10.25-1/_2021-10-25-09-44-52/livox
+pcd_livox = "/home/hcq/data/2022anno/2021.12.10-shenbao/10.25-1/"
 
 
 # 输出
@@ -38,7 +39,7 @@ for i in json_livox:
     #     for path in json_livox + path_path:
     #         file_path =  json_livox + path_path + path
     for j in os.listdir(i):
-        list_json = os.listdir('%s/%s/livox/'%(i,j))
+        list_json = os.listdir('%s/%s/livox/'%(i,j)) # ['000002.json', '000044.json', ...]
         # 1 排序（转数字排序，再转字符）
         flielist = [int(x.split('.')[0]) for x in list_json] # 只有json
         flielist.sort()
@@ -53,6 +54,7 @@ for i in json_livox:
 
 # ======================================================上面先运行============================================================
 # step2 处理每个json文件
+# json_file '/home/hcq/data/2022anno/HT融合追踪交付0317/标注结果/_2021-10-25-10-12-37/livox/000000.json'
 def get_json(json_file, out_dir, filename):
     # 读取 json 文件数据
     with open(json_file, 'r') as load_f:
@@ -61,7 +63,14 @@ def get_json(json_file, out_dir, filename):
     # 修改输出文件名
     # filename = 0
     # filename = '%06d' % filename # filename 修改名字 '000000'
-    filename_txt = out_dir + filename + '.txt' # 保存文件路径
+    filename_txt = out_dir +filename + '.txt' # 保存txt文件路径============
+    # 保存pcd名字  json的路径
+    pcd_path = pcd_livox + json_file.split("/")[-3] + "/livox/" + json_file.split("/")[-1].split(".")[0] + ".pcd"
+    # 重命名并保存pcd到指定位置
+    src = pcd_path
+    dst = out_dir_livox_pcd + filename + ".pcd" # 保存pcd文件路径============
+    os.rename(src, dst)
+    
     # 创建txt文件
     fp = open(filename_txt, mode="w", encoding="utf-8")
     # 将数据写入文件
