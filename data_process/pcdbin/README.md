@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2022-03-21 14:20:47
- * @LastEditTime: 2022-03-21 14:22:00
+ * @LastEditTime: 2022-03-21 14:23:28
  * @FilePath: /Python/data_process/pcdbin/README.md
 -->
 
@@ -20,6 +20,6 @@
 `data_process/pcdbin/pcd2bin/pcd2bin.py`
 
 ```
-python pcd2bin.py convert /home/hcq/pointcloud/Python/data_process/data /home/hcq/pointcloud/Python/data_process/data
+python pcd2bin.py convert /home/hcq/data/2022anno/finaul_result/pcd_result /home/hcq/data/2022anno/finaul_result/bin_result
 
 ```

@@ -1,3 +1,4 @@
+# coding=UTF-8
 '''
 Author: your name
 运行命令：python pcd2bin.py convert /home/hcq/pointcloud/Python/data_process/data /home/hcq/pointcloud/Python/data_process/data
