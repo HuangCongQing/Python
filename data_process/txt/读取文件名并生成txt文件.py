@@ -4,15 +4,16 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2021-10-22 10:06:47
-LastEditTime: 2021-10-22 10:36:33
+LastEditTime: 2022-03-21 14:13:20
 FilePath: /Python/data_process/txt/读取文件名并生成txt文件.py
 '''
+
 import os
 
 
 class ReadImageName():
     def __init__(self):
-        self.path = '/home/hcq/data/test_anno_2021-08-02-10-22-25_bag试标结果/试标结果/点云追踪结果/转换后结果数据/test_anno_2021-08-02-10-22-25_bag'
+        self.path = '/home/hcq/data/2022anno/finaul_result/txt_result'
 
     def readname(self):
         filenames = os.listdir(self.path)
