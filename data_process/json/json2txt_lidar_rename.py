@@ -5,7 +5,7 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2022-01-20 16:20:06
-LastEditTime: 2022-03-29 17:20:48
+LastEditTime: 2022-03-29 18:19:31
 FilePath: /Python/data_process/json/json2txt_lidar_rename.py
 '''
 
@@ -85,23 +85,24 @@ def get_json(json_file, out_dir, filename):
     for i in range(len(objects)):
         # 判断objects是否符合要求
         if "content" not in content["objects"][i].keys():
+
             continue
         label = content["objects"][i]["content"]["label"]
         idx_2_name = {1: 'Pedestrian', 2: 'Truck', 3: 'Widebody', 5: 'Car', 4: 'Auxiliary', 6: 'Excavator'}
         label = idx_2_name[int(label)]
         # print("label:", label)
-        str_tmp += str(label) + "  " # 0维
+        str_tmp += str(label) + " " # 0维
         cx = (content["objects"][i])["center"]["x"]
         cy = (content["objects"][i])["center"]["y"]
         cz = (content["objects"][i])["center"]["z"]
-        str_tmp += str(cx) + "  " + str(cy)+ "  " + str(cz)+ "  "  ##暂存内容
+        str_tmp += str(cx) + " " + str(cy)+ " " + str(cz)+ " "  ##暂存内容
         dx = (content["objects"][i])["dimensions"]["length"]
         dy = (content["objects"][i])["dimensions"]["width"]
         dz = (content["objects"][i])["dimensions"]["height"]
-        str_tmp += str(dx) + "  " + str(dy)+ "  " + str(dz)+ "  "  ##暂存内容
+        str_tmp += str(dx) + " " + str(dy)+ " " + str(dz)+ " "  ##暂存内容
         yaw = (content["objects"][i])["rotation"]["z"] # 7 yaw角
         trackid =  (content["objects"][i])["objectid"] # 8
-        str_tmp += str(yaw) + "  " +  str(trackid) # 行尾
+        str_tmp += str(yaw) + " " +  str(trackid) # 行尾
         #   换行
         str_tmp +=  "\n"  ##暂存内容
     fp.write(str_tmp)
