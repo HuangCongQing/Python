@@ -5,14 +5,15 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2022-01-20 16:20:06
-LastEditTime: 2022-03-21 18:25:02
-FilePath: /Python/data_process/json/json2txt_lidar_rename.py
+LastEditTime: 2022-03-29 17:54:05
+FilePath: /Python/data_process/json/json2txt_lidar_rename_img.py
 '''
 
 import os
 import json
 import numpy as np
 from  tqdm import tqdm
+import shutil
 
 # 本文件测试
 json_dir = '/home/hcq/pointcloud/Python/data_process/json/livox_data/'  # json文件路径
@@ -31,7 +32,7 @@ pcd_livox = "/home/hcq/data/2022anno/2021.12.10-shenbao/10.25-1/"
 # 输出
 # out_dir_livox_txt = '/home/hcq/data/2022anno/finaul_result/txt_result/'
 out_dir_livox_txt = '/home/hcq/data/2022anno/finaul_result/test_result_all/'
-out_dir_livox_pcd = '/home/hcq/data/2022anno/finaul_result/pcd_result/'
+out_dir_livox_pcd = '/home/hcq/data/2022anno/finaul_result/pcd_result/' # 不用重新转移pcd
 
 # step1 整理目录层级，得到所有json列表
 for i in json_livox:
@@ -70,7 +71,7 @@ def get_json(json_file, out_dir, filename):
     # 重命名并保存pcd到指定位置==============================================
     # src = pcd_path
     # dst = out_dir_livox_pcd + filename + ".pcd" # 保存pcd文件路径============
-    # os.rename(src, dst)
+    # shutil.copyfile(src, dst)
     print("遍历文件：",json_file)
     
     # 创建txt文件
@@ -87,7 +88,7 @@ def get_json(json_file, out_dir, filename):
         if "content" not in content["objects"][i].keys():
             continue
         label = content["objects"][i]["content"]["label"]
-        idx_2_name = {1: 'Pedestrian', 2: 'Truck', 3: 'Widebody', 4: 'Car', 5: 'Auxiliary', 6: 'Excavator'}
+        idx_2_name = {1: 'Pedestrian', 2: 'Truck', 3: 'Widebody', 5: 'Car', 4: 'Auxiliary', 6: 'Excavator'}
         label = idx_2_name[int(label)]
         # print("label:", label)
         str_tmp += str(label) + " " # 0维
