@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-06-16 17:18:05
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-08-04 23:58:51
+ * @LastEditTime: 2022-08-05 00:01:39
 -->
 
 # Python
@@ -14,7 +14,7 @@ Python学习
 运行
 ```jupyter-notebook```
 
-* modules：https://github.com/HuangCongQing/python-libraries
+* python库（numpy&pandas&...）学习：https://github.com/HuangCongQing/python-libraries
   * https://pypi.org
   * https://www.lfd.uci.edu/~gohlke/pythonlibs/
 
