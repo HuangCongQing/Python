@@ -5,7 +5,7 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2022-01-20 16:20:06
-LastEditTime: 2022-03-29 18:19:31
+LastEditTime: 2022-04-25 14:57:54
 FilePath: /Python/data_process/json/json2txt_lidar_rename.py
 '''
 
@@ -14,6 +14,7 @@ import json
 import numpy as np
 from  tqdm import tqdm
 import shutil
+import random
 
 # 本文件测试
 json_dir = '/home/hcq/pointcloud/Python/data_process/json/livox_data/'  # json文件路径
@@ -23,14 +24,14 @@ out_dir = '/home/hcq/pointcloud/Python/data_process/json/livox_result/'  # 输�
 # 项目输入
 json_livox_dirs = []
 # json_livox = ['/home/hcq/data/2022anno/融合交付/融合交付/2021.12.10-shenbao/10.25-1', '/home/hcq/data/2022anno/融合交付/融合交付/2021.12.10-shenbao/10.25-2']
-json_livox = ['/home/hcq/data/2022anno/HT融合追踪交付0317/标注结果']
+json_livox = ['/home/hcq/data/2022anno/融合追踪标注0408/标注结果']
 # pcd文件（原始数据转移）
 # /home/hcq/data/2022anno/2021.12.10-shenbao/10.25-1/_2021-10-25-09-44-52/livox
 pcd_livox = "/home/hcq/data/2022anno/2021.12.10-shenbao/10.25-1/"
 
 
 # 输出
-out_dir_livox_txt = '/home/hcq/data/2022anno/finaul_result/txt_result/'
+out_dir_livox_txt = '/home/hcq/data/2022anno/finaul_result/txt_result_180filter/'
 out_dir_livox_pcd = '/home/hcq/data/2022anno/finaul_result/pcd_result/'
 
 # step1 整理目录层级，得到所有json列表
@@ -53,6 +54,11 @@ for i in json_livox:
             # '/home/hcq/data/2022anno/融合交付/融合交付/2021.12.10-shenbao/10.25-1/_2021-10-25-11-40-50/livox/000002.json'
 # print(len(json_livox_dirs))
 
+# 打乱路径
+print("before: ", json_livox_dirs)
+random.shuffle(json_livox_dirs)
+print("after: ", json_livox_dirs)
+
 # ======================================================上面先运行============================================================
 # step2 处理每个json文件
 # json_file '/home/hcq/data/2022anno/HT融合追踪交付0317/标注结果/_2021-10-25-10-12-37/livox/000000.json'
@@ -73,8 +79,6 @@ def get_json(json_file, out_dir, filename):
     # os.rename(src, dst) # rename不能用，相当于移动
     shutil.copyfile(src, dst)
 
-    # 创建txt文件
-    fp = open(filename_txt, mode="w", encoding="utf-8")
     # 将数据写入文件
     str_tmp = ""  # 存储字符串内容
     # 1.获取数据============================================
@@ -85,16 +89,16 @@ def get_json(json_file, out_dir, filename):
     for i in range(len(objects)):
         # 判断objects是否符合要求
         if "content" not in content["objects"][i].keys():
-
             continue
         label = content["objects"][i]["content"]["label"]
         idx_2_name = {1: 'Pedestrian', 2: 'Truck', 3: 'Widebody', 5: 'Car', 4: 'Auxiliary', 6: 'Excavator'}
         label = idx_2_name[int(label)]
         # print("label:", label)
-        str_tmp += str(label) + " " # 0维
         cx = (content["objects"][i])["center"]["x"]
+        if cx > 180.0: continue
         cy = (content["objects"][i])["center"]["y"]
         cz = (content["objects"][i])["center"]["z"]
+        str_tmp += str(label) + " " # 0维
         str_tmp += str(cx) + " " + str(cy)+ " " + str(cz)+ " "  ##暂存内容
         dx = (content["objects"][i])["dimensions"]["length"]
         dy = (content["objects"][i])["dimensions"]["width"]
@@ -105,8 +109,11 @@ def get_json(json_file, out_dir, filename):
         str_tmp += str(yaw) + " " +  str(trackid) # 行尾
         #   换行
         str_tmp +=  "\n"  ##暂存内容
-    fp.write(str_tmp)
-    fp.close()
+    if not str_tmp == "":
+        # 创建txt文件
+        fp = open(filename_txt, mode="w", encoding="utf-8")
+        fp.write(str_tmp)
+        fp.close()
 
 def main():
     files = os.listdir(json_dir)  # 得到文件夹下的所有文件名称 ['000000.json', '000015.json']
