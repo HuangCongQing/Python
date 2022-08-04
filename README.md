@@ -3,8 +3,8 @@
  * @Author: HCQ
  * @Company(School): UCAS
  * @Date: 2020-06-16 17:18:05
- * @LastEditors: HCQ
- * @LastEditTime: 2020-07-21 20:49:31
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-08-04 23:58:51
 -->
 
 # Python
@@ -17,6 +17,11 @@ Python学习
 * modules：https://github.com/HuangCongQing/python-libraries
   * https://pypi.org
   * https://www.lfd.uci.edu/~gohlke/pythonlibs/
+
+
+
+* [json转txt（点云标注）](./data_process\json\json2txt_lidar_rename.py)
+* [json转txt](./data_process\json\json2txt_lidar_rename.py)
 
 ### Tutorial
 
