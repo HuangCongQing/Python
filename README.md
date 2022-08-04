@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-06-16 17:18:05
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-08-05 00:01:39
+ * @LastEditTime: 2022-08-05 00:09:25
 -->
 
 # Python
@@ -19,7 +19,8 @@ Python学习
   * https://www.lfd.uci.edu/~gohlke/pythonlibs/
 
 
-
+### 点云相关处理
+* [处理kitti标注文件txt](data_process\txt\txt_kitti\process_kitti.ipynb)
 * [json转txt（点云标注）](./data_process\json\json2txt_lidar_rename.py)
 * [json转txt](./data_process\json\json2txt_lidar_rename.py)
 
